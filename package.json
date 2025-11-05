@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-vue",
+  "version": "1.0.0",
+  "description": "MCP server with Vue.js frontend for ChatGPT integration",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "node server.js"
+  },
+  "keywords": ["vue", "mcp", "vite", "express", "openai", "chatgpt"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.21.0",
+    "express": "^4.19.2",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
