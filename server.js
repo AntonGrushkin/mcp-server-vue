@@ -24,7 +24,7 @@ const resourceUri = "ui://widget/vue-app.html";
 const resource = {
   uri: resourceUri,
   name: "Vue.js App Widget",
-  description: "Vue.js компонент для интеграции с ChatGPT через MCP",
+  description: "Vue.js component for integration with ChatGPT via MCP",
   mimeType: "text/html+skybridge",
   _meta: {
     "openai/outputTemplate": resourceUri,
@@ -35,13 +35,13 @@ const resource = {
 
 const tool = {
   name: "show_vue_app",
-  description: "Показать интерактивное Vue.js приложение",
-  title: "Показать Vue приложение",
+  description: "Show interactive Vue.js application",
+  title: "Show Vue application",
   inputSchema: { type: "object", properties: {} },
   _meta: {
     "openai/outputTemplate": resourceUri,
-    "openai/toolInvocation/invoking": "Загрузка Vue.js приложения...",
-    "openai/toolInvocation/invoked": "Vue приложение загружено!",
+    "openai/toolInvocation/invoking": "Loading Vue.js application...",
+    "openai/toolInvocation/invoked": "Vue application loaded!",
   },
 };
 
@@ -77,10 +77,10 @@ function createVueServer() {
   server.setRequestHandler(CallToolRequestSchema, async () => ({
     content: [{
       type: "text",
-      text: "Vue.js приложение загружено! Используйте кнопки для взаимодействия с компонентом.",
+      text: "Vue.js application loaded! Use the buttons to interact with the component.",
     }],
     structuredContent: { 
-      message: "Vue.js приложение готово к использованию", 
+      message: "Vue.js application ready to use", 
       timestamp: new Date().toISOString() 
     },
     _meta: tool._meta,

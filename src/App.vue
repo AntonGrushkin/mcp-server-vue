@@ -2,29 +2,29 @@
   <div class="widget-container">
     <div class="widget-header">
       <h1>{{ title }}</h1>
-      <p class="subtitle">Интерактивный Vue виджет</p>
+      <p class="subtitle">Interactive Vue Widget</p>
     </div>
     
     <div class="widget-content">
       <div class="counter-section">
-        <h2>Счетчик</h2>
+        <h2>Counter</h2>
         <div class="counter-display">
           <button @click="decrement" class="btn btn-minus">-</button>
           <span class="counter-value">{{ count }}</span>
           <button @click="increment" class="btn btn-plus">+</button>
         </div>
-        <button @click="reset" class="btn btn-reset">Сбросить</button>
+        <button @click="reset" class="btn btn-reset">Reset</button>
       </div>
 
       <div class="message-section">
-        <h2>Сообщения</h2>
+        <h2>Messages</h2>
         <input 
           v-model="message" 
           @keyup.enter="addMessage"
-          placeholder="Введите сообщение..."
+          placeholder="Enter a message..."
           class="message-input"
         />
-        <button @click="addMessage" class="btn btn-add">Добавить</button>
+        <button @click="addMessage" class="btn btn-add">Add</button>
         <ul class="message-list">
           <li v-for="(msg, index) in messages" :key="index" class="message-item">
             {{ msg }}
@@ -34,7 +34,7 @@
     </div>
 
     <div class="widget-footer">
-      <p>Время: {{ currentTime }}</p>
+      <p>Time: {{ currentTime }}</p>
     </div>
   </div>
 </template>
